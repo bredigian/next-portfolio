@@ -1,24 +1,54 @@
 "use client"
 
+import { AnimatePresence, motion } from "framer-motion"
+import { useEffect, useState } from "react"
+
 import Image from "next/image"
-import { motion } from "framer-motion"
 import myImage from "@/assets/images/me.webp"
 
 const Home = () => {
+  const titles = [
+    "FullStack Developer",
+    "Frontend Developer",
+    "Backend Developer",
+  ]
+  const [titleActive, setTitleActive] = useState(0)
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setTitleActive((prevIndex) => (prevIndex + 1) % titles.length)
+    }, 3000)
+
+    return () => clearInterval(interval)
+  }, [])
+
   return (
     <main className="flex flex-row flex-wrap items-end justify-center gap-8 w-full">
       <div className="flex flex-col items-start gap-8 max-w-[800px]">
-        <motion.h1
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.3, delay: 0.25 }}
-          className="text-6xl text-white"
-        >
-          Hi! I'm
-          <b className="bg-gray-100 text-[#ffffff95] py-1 px-3 rounded-3xl">
-            FullStack Developer
-          </b>
-        </motion.h1>
+        <div className="flex items-center gap-4">
+          <motion.h1
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.3, delay: 0.25 }}
+            className="text-6xl text-white"
+          >
+            Hi! I'm
+          </motion.h1>
+          <AnimatePresence mode="wait">
+            <motion.h1
+              key={titleActive}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.3, delay: 0.25 }}
+              className="text-6xl text-white"
+            >
+              <motion.b className="text-[#FED766]">
+                {titles[titleActive]}
+              </motion.b>
+            </motion.h1>
+          </AnimatePresence>
+        </div>
         <motion.h6
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -31,11 +61,11 @@ const Home = () => {
           transition={{ duration: 0.3, delay: 0.75 }}
           className="text-justify text-base text-gray-300"
         >
-          I am a proactive, organized and responsible person, with good
-          interpersonal relationships. I always have the best disposition to
-          carry out my work. I am looking for a job where I can continue
-          learning, and at the same time share my experience and knowledge with
-          the work team.
+          I currently live in La Plata, I studied a systems-oriented career for
+          3 years but with the passage of time and other circumstances I
+          realized that it is not what I thought. Thanks to that, in March 2022
+          I began to take different courses and learn by myself different
+          technologies oriented to web development.
         </motion.p>
       </div>
       <motion.div
