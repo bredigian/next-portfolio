@@ -7,8 +7,13 @@ import { motion } from "framer-motion"
 import { social } from "@/constants/social"
 
 const About = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    console.log(e)
+  }
+
   return (
-    <main className="flex flex-wrap items-center justify-center gap-16 w-full">
+    <main className="relative flex flex-wrap items-start justify-center gap-16 w-full">
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -45,9 +50,9 @@ const About = () => {
           className="flex flex-col items-start gap-2"
         >
           <h3 className="text-xl text-white">Contact me</h3>
-          <ContactForm />
+          <ContactForm handleSubmit={handleSubmit} />
         </motion.div>
-        <ul className="flex flex-wrap gap-2">
+        <ul className="absolute flex flex-wrap gap-2 bottom-5 translate-x-[394px]">
           {social.map((item, index) => {
             const delay = 1.75 + index * 0.1
             return (
