@@ -33,7 +33,7 @@ export const skills = [
     backgroundColor: "#764abb",
   },
   {
-    name: "NodeJS",
+    name: "Node",
     icon: <FaNodeJs size={50} color="#ffffff" />,
     backgroundColor: "#24b45d",
   },

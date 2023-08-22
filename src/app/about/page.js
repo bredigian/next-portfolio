@@ -7,11 +7,6 @@ import { motion } from "framer-motion"
 import { social } from "@/constants/social"
 
 const About = () => {
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    console.log(e)
-  }
-
   return (
     <main className="relative flex flex-wrap items-start justify-center gap-16 w-full">
       <motion.div
@@ -37,8 +32,9 @@ const About = () => {
           transition={{ duration: 0.3, delay: 0.75 }}
           className="text-gray-300 text-sm text-justify"
         >
-          I consider myself an organized and responsible person, who is
-          constantly learning. I speak native Spanish and my level of English is
+          This is me. An organized and responsible person, who is constantly
+          learning, and also spends a large part of the day listening to music
+          with headphones. I speak native Spanish and my level of English is
           basic. I am currently doing freelance work, but I am still looking to
           find a stable job, in which I can contribute all my skills to the work
           team and also learn from it.
@@ -50,7 +46,7 @@ const About = () => {
           className="flex flex-col items-start gap-2"
         >
           <h3 className="text-xl text-white">Contact me</h3>
-          <ContactForm handleSubmit={handleSubmit} />
+          <ContactForm />
         </motion.div>
         <ul className="absolute flex flex-wrap gap-2 bottom-5 translate-x-[394px]">
           {social.map((item, index) => {

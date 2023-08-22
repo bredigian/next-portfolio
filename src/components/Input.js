@@ -29,13 +29,17 @@ const Input = ({ input }) => {
       <label
         htmlFor={input}
         className={`text-gray-300 text-sm absolute duration-200 ease-in-out ${
-          !translate ? "translate-x-2 translate-y-2" : "-translate-y-6"
+          !translate
+            ? "translate-x-2 translate-y-2 cursor-text"
+            : "-translate-y-6"
         }`}
       >
         {input}
       </label>
       {input === "Message" ? (
         <textarea
+          name={input}
+          id={input}
           onFocus={translateLabel}
           onBlur={translateBackLabel}
           value={value}
