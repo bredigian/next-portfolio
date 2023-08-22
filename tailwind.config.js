@@ -18,6 +18,9 @@ module.exports = {
           200: "#ffffff50",
           300: "#ffffff70",
         },
+        yellow: {
+          primary: "#fed766",
+        },
       },
     },
   },

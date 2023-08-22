@@ -8,9 +8,9 @@ import myImage from "@/assets/images/me.webp"
 
 const Home = () => {
   const titles = [
-    "FullStack Developer",
     "Frontend Developer",
     "Backend Developer",
+    "FullStack Developer",
   ]
   const [titleActive, setTitleActive] = useState(0)
 
@@ -23,7 +23,7 @@ const Home = () => {
   }, [])
 
   return (
-    <main className="flex flex-row flex-wrap items-end justify-center gap-8 w-full">
+    <main className="flex flex-row flex-wrap items-center justify-center gap-8 w-full">
       <div className="flex flex-col items-start gap-8 max-w-[800px]">
         <div className="flex items-center gap-4">
           <motion.h1
@@ -43,7 +43,7 @@ const Home = () => {
               transition={{ duration: 0.3, delay: 0.25 }}
               className="text-6xl text-white"
             >
-              <motion.b className="text-[#FED766]">
+              <motion.b className="text-yellow-primary">
                 {titles[titleActive]}
               </motion.b>
             </motion.h1>
@@ -81,7 +81,7 @@ const Home = () => {
         <Image
           className="rounded-3xl"
           priority
-          width={280}
+          width={200}
           src={myImage}
           alt="Gianluca Bredice"
         />
