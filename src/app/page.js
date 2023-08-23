@@ -33,7 +33,7 @@ const Home = () => {
             transition={{ duration: 0.3, delay: 0.25 }}
             className="text-6xl text-white"
           >
-            Hi! I'm
+            {"Hi! I'm"}
           </motion.h1>
           <AnimatePresence mode="wait">
             <motion.h1
