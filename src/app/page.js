@@ -4,6 +4,7 @@ import { AnimatePresence, motion } from "framer-motion"
 import { useEffect, useState } from "react"
 
 import Image from "next/image"
+import PageAnimate from "@/components/PageAnimate"
 import myImage from "@/assets/images/me.webp"
 
 const Home = () => {
@@ -23,7 +24,7 @@ const Home = () => {
   }, [])
 
   return (
-    <main className="flex flex-row flex-wrap items-center justify-center gap-8 w-full">
+    <PageAnimate className="flex flex-row flex-wrap items-center justify-center gap-8 w-full">
       <div className="flex flex-col items-start gap-8 max-w-[800px]">
         <div className="flex items-center gap-4">
           <motion.h1
@@ -69,13 +70,11 @@ const Home = () => {
         </motion.p>
       </div>
       <motion.div
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 1, scale: 1 }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
         transition={{
-          duration: 1.25,
+          duration: 0.3,
           delay: 1.25,
-          bounce: 0.6,
-          type: "spring",
         }}
       >
         <Image
@@ -86,7 +85,7 @@ const Home = () => {
           alt="Gianluca Bredice"
         />
       </motion.div>
-    </main>
+    </PageAnimate>
   )
 }
 

@@ -5,15 +5,18 @@ import Input from "./Input"
 const ContactForm = () => {
   const dataInputs = ["Name", "Email", "Message"]
 
-  const handleSubmit = async (formData) => {
-    const form = {
-      name: formData.get("Name"),
-      email: formData.get("Email"),
-      message: formData.get("Message"),
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+
+    const data = {
+      name: e.target.Name.value,
+      email: e.target.Email.value,
+      message: e.target.Message.value,
     }
+
     const response = fetch("../api/contact", {
       method: "POST",
-      body: JSON.stringify(form),
+      body: JSON.stringify(data),
       headers: {
         "Content-Type": "application/json",
       },
@@ -27,7 +30,10 @@ const ContactForm = () => {
   }
 
   return (
-    <form action={handleSubmit} className="grid grid-cols-8 gap-4 w-full py-4">
+    <form
+      onSubmit={handleSubmit}
+      className="grid grid-cols-8 gap-4 w-full py-4"
+    >
       {dataInputs.map((input) => {
         return <Input key={input} input={input} />
       })}

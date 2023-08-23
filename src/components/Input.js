@@ -44,18 +44,20 @@ const Input = ({ input }) => {
           onBlur={translateBackLabel}
           value={value}
           onChange={(e) => setValue(e.target.value)}
+          required
           className="text-sm text-gray-200 bg-gray-100 w-full rounded-xl p-2 outline-none h-[150px] resize-none"
         ></textarea>
       ) : (
         <input
           onFocus={translateLabel}
           onBlur={translateBackLabel}
-          type="text"
+          type={`${input === "Name" ? "text" : "email"}`}
           name={input}
           id={input}
           autoComplete={`${input === "Name" ? "given-name" : "email"}`}
           value={value}
           onChange={(e) => setValue(e.target.value)}
+          required
           className="text-sm text-gray-200 w-full bg-gray-100 rounded-xl p-2 outline-none"
         />
       )}

@@ -2,13 +2,14 @@
 
 import ContactForm from "@/components/ContactForm"
 import Image from "next/image"
+import PageAnimate from "@/components/PageAnimate"
 import meImage from "@/assets/images/me.jpg"
 import { motion } from "framer-motion"
 import { social } from "@/constants/social"
 
 const About = () => {
   return (
-    <main className="relative flex flex-wrap items-start justify-center gap-16 w-full">
+    <PageAnimate className="relative flex flex-wrap items-start justify-center gap-16 w-full">
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -67,7 +68,7 @@ const About = () => {
           })}
         </ul>
       </div>
-    </main>
+    </PageAnimate>
   )
 }
 

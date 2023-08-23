@@ -1,12 +1,13 @@
 "use client"
 
+import PageAnimate from "@/components/PageAnimate"
 import React from "react"
 import { motion } from "framer-motion"
 import { skills } from "@/constants/skills"
 
 const Skills = () => {
   return (
-    <main className="flex flex-wrap justify-center items-center mx-auto gap-4 w-full">
+    <PageAnimate className="flex flex-wrap justify-center items-center mx-auto gap-4 w-full">
       <div className="flex flex-col items-center gap-4">
         <motion.h1
           initial={{ opacity: 0 }}
@@ -37,7 +38,7 @@ const Skills = () => {
               style={{
                 backgroundColor: skill.backgroundColor,
               }}
-              className={`flex flex-col justify-center items-center p-2 gap-2 rounded-3xl w-[100px] h-[120px] hover:scale-105 duration-200 ease-in-out`}
+              className={`flex flex-col justify-center items-center p-2 gap-2 rounded-3xl w-[100px] h-[120px] hover:scale-105 duration-200 ease-in-out cursor-default`}
             >
               {skill.icon}
               <p
@@ -53,7 +54,7 @@ const Skills = () => {
           )
         })}
       </div>
-    </main>
+    </PageAnimate>
   )
 }
 

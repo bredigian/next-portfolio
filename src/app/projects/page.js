@@ -1,11 +1,12 @@
 "use client"
 
+import PageAnimate from "@/components/PageAnimate"
 import { motion } from "framer-motion"
 import { projects } from "@/constants/projects"
 
 const Projects = () => {
   return (
-    <main className="flex flex-col items-center gap-4 w-full mx-auto p-8">
+    <PageAnimate className="flex flex-col items-center gap-4 w-full mx-auto p-8">
       <motion.h1
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -61,7 +62,7 @@ const Projects = () => {
             )
           })}
       </div>
-    </main>
+    </PageAnimate>
   )
 }
 
