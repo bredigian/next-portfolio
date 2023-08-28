@@ -39,7 +39,7 @@ const ContactForm = () => {
       })}
       <button
         type="submit"
-        className="text-sm col-span-2 rounded-lg bg-gray-100 text-gray-300 py-2 mt-4"
+        className="xs:text-xs sm:text-sm col-span-2 rounded-lg bg-gray-100 text-gray-300 py-2 mt-4"
       >
         Submit
       </button>

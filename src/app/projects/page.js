@@ -1,28 +1,18 @@
 "use client"
 
 import PageAnimate from "@/components/PageAnimate"
+import Paragraph from "@/components/Paragraph"
+import Title from "@/components/Title"
 import { motion } from "framer-motion"
 import { projects } from "@/constants/projects"
 
 const Projects = () => {
   return (
-    <PageAnimate className="flex flex-col items-center gap-4 w-full mx-auto p-8">
-      <motion.h1
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.3, delay: 0.25 }}
-        className="text-6xl text-white"
-      >
-        Experience
-      </motion.h1>
-      <motion.p
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.3, delay: 0.75 }}
-        className="text-base text-gray-300"
-      >
+    <PageAnimate className="flex flex-col items-center xs:gap-4 lg:gap-6 w-full mx-auto xs:p-8">
+      <Title delay={0.25}>Experience</Title>
+      <Paragraph delay={0.75}>
         Projects which helped me to reach the current level of experience
-      </motion.p>
+      </Paragraph>
       <div className="flex flex-wrap items-center justify-center max-w-[1000px] gap-4">
         {projects
           .sort((a, b) => {
@@ -45,7 +35,7 @@ const Projects = () => {
               >
                 <span className="bg-yellow-primary h-full w-[40px]"></span>
                 <div className="flex flex-col items-start p-4 gap-2 text-gray-300 hover:text-white duration-200 ease-in-out max-w-[360px]">
-                  <h1 className="text-base">{project.name}</h1>
+                  <h1 className="xs:text-sm lg:text-base">{project.name}</h1>
                   <p className="text-xs">{project.description}</p>
                   <div className="flex items-center justify-between w-full">
                     <p className="text-xs">{dateFormatted}</p>
