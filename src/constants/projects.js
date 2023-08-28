@@ -23,14 +23,14 @@ export const projects = [
     name: "Iluminarte",
     description:
       "Candle website developed with React, TailwindCSS, NodeJS and MySQL",
-    url: "https://dev-iluminarte.netlify.app",
+    url: "https://azulmarinogt.com",
     date: new Date(2023, 6, 4),
   },
   {
     name: "SG Pharma",
     description:
       "Pharmacy company website developed with React, TailwindCSS, NodeJS and MySQL",
-    url: "https://dev-sgpharma.netlify.app",
-    date: new Date(Date.now()),
+    url: "https://sgmedicinas.com",
+    date: new Date(2023, 7, 26),
   },
 ]
