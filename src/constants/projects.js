@@ -1,5 +1,12 @@
 export const projects = [
   {
+    name: "MB Peluquería",
+    description:
+      "Shifts system for a hair salon developed with NextJS, TailwindCSS and MongoDB",
+    url: "https://mbpeluqueria.vercel.app",
+    date: new Date(2023, 9, 3),
+  },
+  {
     name: "Casatomada",
     description:
       "Drinks store developed with JavaScript, SASS, Bootstrap and Firebase",
