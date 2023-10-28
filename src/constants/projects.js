@@ -30,7 +30,7 @@ export const projects = [
     name: "Iluminarte",
     description:
       "Candle website developed with React, TailwindCSS, NodeJS and MySQL",
-    url: "https://azulmarinogt.com",
+    url: "https://iluminarte.vercel.app",
     date: new Date(2023, 6, 4),
   },
   {
