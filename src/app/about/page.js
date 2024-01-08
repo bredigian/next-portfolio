@@ -10,7 +10,7 @@ import { social } from "@/constants/social"
 
 const About = () => {
   return (
-    <PageAnimate className="relative flex flex-wrap items-start justify-center xs:gap-8 xl:gap-16 w-full xs:p-8">
+    <PageAnimate className="sm:h-screen relative flex flex-col lg:flex-row lg:flex-wrap items-center lg:justify-center xs:gap-8 xl:gap-16 w-full xs:px-8 xs:pb-4 sm:pt-4 sm:overflow-auto">
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -46,24 +46,6 @@ const About = () => {
           </h3>
           <ContactForm />
         </motion.div>
-        <ul className="absolute flex flex-wrap gap-2 xs:bottom-[49px] xs:translate-x-[184px] sm:translate-x-[394px]">
-          {social.map((item, index) => {
-            const delay = 1.75 + index * 0.1
-            return (
-              <motion.li
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.3, delay }}
-                key={item.name}
-                className="text-gray-300 hover:text-white duration-200 ease-in-out"
-              >
-                <a href={item.url} target="_blank">
-                  {item.icon}
-                </a>
-              </motion.li>
-            )
-          })}
-        </ul>
       </div>
     </PageAnimate>
   )

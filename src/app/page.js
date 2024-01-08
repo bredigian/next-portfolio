@@ -28,7 +28,7 @@ const Home = () => {
   }, [])
 
   return (
-    <PageAnimate className="flex flex-row flex-wrap items-center justify-center gap-8 w-full xs:p-8">
+    <PageAnimate className="flex flex-row flex-wrap items-center justify-center gap-8 w-full xs:pb-4 xs:px-8">
       <div className="flex flex-col items-start xs:gap-4 xl:gap-8 max-w-[800px]">
         <Description flexRow={true}>
           <Title delay={0.25}>{"Hi! I'm"}</Title>

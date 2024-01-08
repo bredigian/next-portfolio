@@ -5,7 +5,7 @@ const Description = ({ children, alignItems, flexRow }) => {
     <div
       className={`flex flex-col ${flexRow && "md:flex-row"} ${
         alignItems || "items-start"
-      } xs:gap-2 sm:gap-4`}
+      } xs:gap-2 xl:gap-4`}
     >
       {children}
     </div>

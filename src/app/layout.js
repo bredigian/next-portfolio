@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${inter.className} flex xs:flex-col sm:flex-row h-screen items-center`}
+        className={`${inter.className} flex xs:flex-col sm:flex-row h-screen items-center lg:overflow-hidden`}
       >
         <Navigator />
         {children}

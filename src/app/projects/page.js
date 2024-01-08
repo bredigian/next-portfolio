@@ -8,7 +8,7 @@ import { projects } from "@/constants/projects"
 
 const Projects = () => {
   return (
-    <PageAnimate className="flex flex-col items-center xs:gap-4 lg:gap-6 w-full mx-auto xs:p-8">
+    <PageAnimate className="sm:h-screen flex flex-col items-center md:justify-center xs:gap-4 lg:gap-6 w-full mx-auto xs:px-8 xs:pb-4 sm:pt-4 sm:overflow-auto">
       <Title delay={0.25}>Experience</Title>
       <Paragraph delay={0.75}>
         Projects which helped me to reach the current level of experience

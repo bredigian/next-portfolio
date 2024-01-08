@@ -1,6 +1,7 @@
 import { FaAws, FaNodeJs, FaReact } from "react-icons/fa6"
 import {
   SiExpress,
+  SiMongodb,
   SiMysql,
   SiPostman,
   SiRedux,
@@ -51,6 +52,11 @@ export const skills = [
     name: "MySQL",
     icon: <SiMysql size={50} color="#ffffff" />,
     backgroundColor: "#005f8b",
+  },
+  {
+    name: "MongoDB",
+    icon: <SiMongodb size={50} color="#ffffff" />,
+    backgroundColor: "#11aa50",
   },
   {
     name: "Postman",

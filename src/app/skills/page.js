@@ -10,14 +10,14 @@ import { skills } from "@/constants/skills"
 
 const Skills = () => {
   return (
-    <PageAnimate className="flex xs:flex-col md:flex-row xs:items-center justify-center gap-4 w-full xs:p-8">
+    <PageAnimate className="flex xs:flex-col md:flex-row xs:items-center justify-center gap-4 w-full xs:px-8 xs:pb-4">
       <Description alignItems={"items-center"} flexRow={false}>
         <Title delay={0.25}>Skills</Title>
         <Paragraph delay={0.75}>
           Technologies that I use every day for work
         </Paragraph>
       </Description>
-      <div className="flex flex-wrap justify-center xs:gap-3 xl:gap-4 w-full max-w-[700px]">
+      <div className="flex flex-wrap justify-center gap-4 w-full max-w-[700px]">
         {skills.map((skill, index) => {
           const delay = 1.25 + index * 0.1
           return (

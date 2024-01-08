@@ -1,6 +1,8 @@
 import { Toaster, toast } from "sonner"
 
 import Input from "./Input"
+import { motion } from "framer-motion"
+import { social } from "@/constants/social"
 
 const ContactForm = () => {
   const dataInputs = ["Name", "Email", "Message"]
@@ -43,6 +45,24 @@ const ContactForm = () => {
       >
         Submit
       </button>
+      <ul className="self-end -translate-y-[2px] justify-end col-span-6 flex flex-wrap gap-2">
+        {social.map((item, index) => {
+          const delay = 1.75 + index * 0.1
+          return (
+            <motion.li
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.3, delay }}
+              key={item.name}
+              className="text-gray-300 hover:text-white duration-200 ease-in-out"
+            >
+              <a href={item.url} target="_blank">
+                {item.icon}
+              </a>
+            </motion.li>
+          )
+        })}
+      </ul>
       <Toaster />
     </form>
   )
