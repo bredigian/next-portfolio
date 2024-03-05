@@ -27,8 +27,8 @@ const Navigator = () => {
   ]
 
   return (
-    <nav className="xs:w-5/6 z-50 sm:m-8 sm:w-min py-8 rounded-3xl duration-200 ease-in-out">
-      <ul className="h-full w-full flex xs:flex-row xs:justify-evenly sm:flex-col xs:items-center sm:items-start xs:gap-2 gap-4 overflow-hidden">
+    <nav className="xs:w-full z-50 sm:m-8 sm:w-min px-8 py-8 rounded-3xl duration-200 ease-in-out">
+      <ul className="h-full w-full flex xs:flex-row xs:justify-between sm:flex-col xs:items-center sm:items-start xs:gap-2 gap-4 overflow-hidden">
         {links.map((link) => {
           return (
             <li key={link.path} className="xs:w-fit sm:w-[100px]">
