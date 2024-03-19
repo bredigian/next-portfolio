@@ -39,13 +39,17 @@ const Projects = () => {
                   <p className="text-xs">{project.description}</p>
                   <div className="flex items-center justify-between w-full">
                     <p className="text-xs">{dateFormatted}</p>
-                    <a
-                      href={project.url}
-                      target="_blank"
-                      className="text-xs hover:underline"
-                    >
-                      Deploy
-                    </a>
+                    {project.url ? (
+                      <a
+                        href={project.url}
+                        target="_blank"
+                        className="text-xs hover:underline"
+                      >
+                        Deploy
+                      </a>
+                    ) : (
+                      <span className="text-xs">Working...</span>
+                    )}
                   </div>
                 </div>
               </motion.div>

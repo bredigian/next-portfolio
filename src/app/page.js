@@ -15,7 +15,7 @@ const Home = () => {
   const titles = [
     "Frontend Developer",
     "Backend Developer",
-    "FullStack Developer",
+    "Fullstack Developer",
   ]
   const [titleActive, setTitleActive] = useState(0)
 
@@ -29,7 +29,7 @@ const Home = () => {
 
   return (
     <PageAnimate className="flex flex-row flex-wrap items-center justify-center gap-8 w-full xs:pb-4 xs:px-8">
-      <div className="flex flex-col items-start xs:gap-4 xl:gap-8 max-w-[800px]">
+      <div className="flex flex-col items-start xs:gap-4 xl:gap-8 md:min-w-[615px] xl:min-w-[800px]">
         <Description flexRow={true}>
           <Title delay={0.25}>{"Hi! I'm"}</Title>
           <AnimatePresence mode="wait">
@@ -42,7 +42,7 @@ const Home = () => {
         </Description>
         <Subtitle
           delay={0.75}
-        >{`My name is Gianluca Bredice, I'm 21 and I'm from Argentina`}</Subtitle>
+        >{`My name is Gianluca Bredice Vivarelli, I'm 21 and I'm from Argentina`}</Subtitle>
         <Paragraph delay={0.75}>
           I currently live in La Plata, I studied a systems-oriented career for
           3 years but with the passage of time and other circumstances I
@@ -63,7 +63,7 @@ const Home = () => {
           className="xs:w-[150px] lg:w-[200px] rounded-3xl"
           priority
           src={myImage}
-          alt="Gianluca Bredice"
+          alt="Gianluca Bredice Vivarelli"
         />
       </motion.div>
     </PageAnimate>

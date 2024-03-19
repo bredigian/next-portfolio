@@ -1,13 +1,14 @@
 import "./globals.css"
 
+import { Analytics } from "@vercel/analytics/react"
 import { Inter } from "next/font/google"
 import Navigator from "@/components/Navigator"
 
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata = {
-  title: "Gianluca Bredice Portfolio",
-  description: "Welcome to Gianluca Bredice Portfolio!",
+  title: "Gianluca Bredice Vivarelli",
+  description: "Welcome to Gianluca Bredice Vivarelli Portfolio!",
   icons: {
     icon: "/favicon.ico",
   },
@@ -19,6 +20,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${inter.className} flex xs:flex-col sm:flex-row h-screen items-center lg:overflow-hidden`}
       >
+        <Analytics />
         <Navigator />
         {children}
       </body>

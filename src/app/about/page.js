@@ -22,7 +22,7 @@ const About = () => {
       >
         <Image
           src={meImage}
-          alt="Gianluca Bredice"
+          alt="Gianluca Bredice Vivarelli"
           className="xs:w-[280px] lg:w-[300px] rounded-3xl"
         />
       </motion.div>
