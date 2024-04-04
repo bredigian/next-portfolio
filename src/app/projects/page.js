@@ -8,12 +8,12 @@ import { projects } from "@/constants/projects"
 
 const Projects = () => {
   return (
-    <PageAnimate className="sm:h-screen flex flex-col items-center md:justify-center xs:gap-4 lg:gap-6 w-full mx-auto xs:px-8 xs:pb-4 sm:pt-4 sm:overflow-auto">
+    <PageAnimate className="sm:h-screen flex flex-col items-center lg:justify-center xs:gap-4 lg:gap-6 w-full mx-auto xs:px-8 xs:pb-4 sm:pt-4 sm:overflow-auto">
       <Title delay={0.25}>Experience</Title>
       <Paragraph delay={0.75}>
         Projects which helped me to reach the current level of experience
       </Paragraph>
-      <div className="flex flex-wrap items-center justify-center max-w-[1000px] gap-4">
+      <div className="flex flex-wrap items-center justify-center max-w-[1100px] gap-4">
         {projects
           .sort((a, b) => {
             return b.date - a.date
