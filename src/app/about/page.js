@@ -4,13 +4,15 @@ import ContactForm from "@/components/ContactForm"
 import Image from "next/image"
 import PageAnimate from "@/components/PageAnimate"
 import Paragraph from "@/components/Paragraph"
+import { TEXT } from "@/constants/texts"
 import meImage from "@/assets/images/me.jpg"
 import { motion } from "framer-motion"
-import { social } from "@/constants/social"
 
-const About = () => {
+const About = ({ searchParams }) => {
+  const LANG = searchParams?.lang?.toLowerCase() === "es" ? TEXT.ESP : TEXT.ENG
+
   return (
-    <PageAnimate className="sm:h-screen relative flex flex-col lg:flex-row lg:flex-wrap items-center lg:justify-center xs:gap-8 xl:gap-16 w-full xs:px-8 xs:pb-4 sm:pt-4 sm:overflow-auto">
+    <PageAnimate className="sm:h-screen relative flex flex-col lg:flex-row lg:flex-wrap items-center lg:justify-center xs:gap-8 xl:gap-16 w-full p-6 sm:overflow-auto">
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -27,14 +29,7 @@ const About = () => {
         />
       </motion.div>
       <div className="flex flex-col items-start gap-4 max-w-[500px]">
-        <Paragraph delay={0.75}>
-          This is me. An organized and responsible person, who is constantly
-          learning, and also spends a large part of the day listening to music
-          with headphones. I speak native Spanish and my level of English is
-          basic. I am currently doing freelance work, but I am still looking to
-          find a stable job, in which I can contribute all my skills to the work
-          team and also learn from it.
-        </Paragraph>
+        <Paragraph delay={0.75}>{LANG.About.DESCRIPTION}</Paragraph>
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -42,9 +37,9 @@ const About = () => {
           className="flex flex-col items-start gap-2"
         >
           <h3 className="xs:text-base sm:text-lg xl:text-xl text-white">
-            Contact me
+            {LANG.About.LABEL}
           </h3>
-          <ContactForm />
+          <ContactForm lang={LANG.About.FORM} />
         </motion.div>
       </div>
     </PageAnimate>

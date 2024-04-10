@@ -4,8 +4,8 @@ import Input from "./Input"
 import { motion } from "framer-motion"
 import { social } from "@/constants/social"
 
-const ContactForm = () => {
-  const dataInputs = ["Name", "Email", "Message"]
+const ContactForm = ({ lang }) => {
+  const dataInputs = [lang.NAME, lang.EMAIL, lang.MESSAGE]
 
   const handleSubmit = async (e) => {
     e.preventDefault()
@@ -43,7 +43,7 @@ const ContactForm = () => {
         type="submit"
         className="xs:text-xs sm:text-sm col-span-2 rounded-lg bg-gray-100 text-gray-300 py-2 mt-4"
       >
-        Submit
+        {lang.SUBMIT}
       </button>
       <ul className="self-end -translate-y-[2px] justify-end col-span-6 flex flex-wrap gap-2">
         {social.map((item, index) => {

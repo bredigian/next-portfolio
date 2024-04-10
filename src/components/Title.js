@@ -9,7 +9,7 @@ const Title = ({ children, delay }) => {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.3, delay: delay }}
-      className="xs:text-[28px] sm:text-4xl lg:text-5xl xl:text-6xl text-white"
+      className="xs:text-[28px] sm:text-4xl lg:text-5xl xl:text-6xl text-white w-max"
     >
       {children}
     </motion.h1>

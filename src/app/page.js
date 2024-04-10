@@ -8,10 +8,11 @@ import Image from "next/image"
 import PageAnimate from "@/components/PageAnimate"
 import Paragraph from "@/components/Paragraph"
 import Subtitle from "@/components/Subtitle"
+import { TEXT } from "@/constants/texts"
 import Title from "@/components/Title"
 import myImage from "@/assets/images/me.webp"
 
-const Home = () => {
+const Home = ({ searchParams }) => {
   const titles = [
     "Frontend Developer",
     "Backend Developer",
@@ -27,11 +28,13 @@ const Home = () => {
     return () => clearInterval(interval)
   }, [])
 
+  const LANG = searchParams?.lang?.toLowerCase() === "es" ? TEXT.ESP : TEXT.ENG
+
   return (
-    <PageAnimate className="flex flex-row flex-wrap items-center justify-center gap-8 w-full xs:pb-4 xs:px-8">
+    <PageAnimate className="flex flex-row flex-wrap items-center justify-center gap-8 w-full p-6">
       <div className="flex flex-col items-start xs:gap-4 xl:gap-8 md:min-w-[615px] xl:min-w-[800px]">
-        <Description flexRow={true}>
-          <Title delay={0.25}>{"Hi! I'm"}</Title>
+        <div className="flex flex-col md:flex-row md:items-center items-start gap-2 xl:min-w-[873px]">
+          <Title delay={0.25}>{LANG.Home.TITLE}</Title>
           <AnimatePresence mode="wait">
             <Title key={titleActive} delay={0.25}>
               <motion.b className="text-yellow-primary">
@@ -39,17 +42,9 @@ const Home = () => {
               </motion.b>
             </Title>
           </AnimatePresence>
-        </Description>
-        <Subtitle
-          delay={0.75}
-        >{`My name is Gianluca Bredice Vivarelli, I'm 21 and I'm from Argentina`}</Subtitle>
-        <Paragraph delay={0.75}>
-          I currently live in La Plata, I studied a systems-oriented career for
-          3 years but with the passage of time and other circumstances I
-          realized that it is not what I thought. Thanks to that, in March 2022
-          I began to take different courses and learn by myself different
-          technologies oriented to web development.
-        </Paragraph>
+        </div>
+        <Subtitle delay={0.75}>{LANG.Home.SUBTITLE}</Subtitle>
+        <Paragraph delay={0.75}>{LANG.Home.DESCRIPTION}</Paragraph>
       </div>
       <motion.div
         initial={{ opacity: 0 }}

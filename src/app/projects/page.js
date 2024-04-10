@@ -2,17 +2,18 @@
 
 import PageAnimate from "@/components/PageAnimate"
 import Paragraph from "@/components/Paragraph"
+import { TEXT } from "@/constants/texts"
 import Title from "@/components/Title"
 import { motion } from "framer-motion"
 import { projects } from "@/constants/projects"
 
-const Projects = () => {
+const Projects = ({ searchParams }) => {
+  const LANG = searchParams?.lang?.toLowerCase() === "es" ? TEXT.ESP : TEXT.ENG
+
   return (
-    <PageAnimate className="sm:h-screen flex flex-col items-center lg:justify-center xs:gap-4 lg:gap-6 w-full mx-auto xs:px-8 xs:pb-4 sm:pt-4 sm:overflow-auto">
-      <Title delay={0.25}>Experience</Title>
-      <Paragraph delay={0.75}>
-        Projects which helped me to reach the current level of experience
-      </Paragraph>
+    <PageAnimate className="sm:h-screen flex flex-col items-center lg:justify-center xs:gap-4 lg:gap-6 w-full mx-auto p-6 sm:overflow-auto">
+      <Title delay={0.25}>{LANG.Projects.TITLE}</Title>
+      <Paragraph delay={0.75}>{LANG.Projects.SUBTITLE}</Paragraph>
       <div className="flex flex-wrap items-center justify-center max-w-[1100px] gap-4">
         {projects
           .sort((a, b) => {
@@ -45,10 +46,10 @@ const Projects = () => {
                         target="_blank"
                         className="text-xs hover:underline"
                       >
-                        Deploy
+                        {LANG.Projects.DEPLOY}
                       </a>
                     ) : (
-                      <span className="text-xs">Working...</span>
+                      <span className="text-xs">{LANG.Projects.NO_DEPLOY}</span>
                     )}
                   </div>
                 </div>

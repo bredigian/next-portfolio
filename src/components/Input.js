@@ -19,12 +19,12 @@ const Input = ({ input }) => {
   return (
     <div
       className={`relative flex flex-col ${
-        input === "Message"
+        input === "Message" || input === "Mensaje"
           ? "col-span-8"
-          : input === "Name"
+          : input === "Name" || input === "Nombre"
           ? "col-span-3"
           : "col-span-5"
-      } ${input === "Message" && "mt-4"}`}
+      } ${(input === "Message" || input === "Mensaje") && "mt-4"}`}
     >
       <label
         htmlFor={input}
@@ -36,7 +36,7 @@ const Input = ({ input }) => {
       >
         {input}
       </label>
-      {input === "Message" ? (
+      {input === "Message" || input === "Mensaje" ? (
         <textarea
           name={input}
           id={input}
@@ -51,10 +51,12 @@ const Input = ({ input }) => {
         <input
           onFocus={translateLabel}
           onBlur={translateBackLabel}
-          type={`${input === "Name" ? "text" : "email"}`}
+          type={`${input === "Name" || input === "Nombre" ? "text" : "email"}`}
           name={input}
           id={input}
-          autoComplete={`${input === "Name" ? "given-name" : "email"}`}
+          autoComplete={`${
+            input === "Name" || input === "Nombre" ? "given-name" : "email"
+          }`}
           value={value}
           onChange={(e) => setValue(e.target.value)}
           required

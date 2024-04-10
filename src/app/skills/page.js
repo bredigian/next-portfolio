@@ -4,18 +4,19 @@ import Description from "@/components/Description"
 import PageAnimate from "@/components/PageAnimate"
 import Paragraph from "@/components/Paragraph"
 import React from "react"
+import { TEXT } from "@/constants/texts"
 import Title from "@/components/Title"
 import { motion } from "framer-motion"
 import { skills } from "@/constants/skills"
 
-const Skills = () => {
+const Skills = ({ searchParams }) => {
+  const LANG = searchParams?.lang?.toLowerCase() === "es" ? TEXT.ESP : TEXT.ENG
+
   return (
-    <PageAnimate className="flex xs:flex-col md:flex-row xs:items-center justify-center gap-4 w-full xs:px-8 xs:pb-4">
+    <PageAnimate className="flex xs:flex-col md:flex-row xs:items-center justify-center gap-4 w-full p-6">
       <Description alignItems={"items-center"} flexRow={false}>
-        <Title delay={0.25}>Skills</Title>
-        <Paragraph delay={0.75}>
-          Technologies that I use every day for work
-        </Paragraph>
+        <Title delay={0.25}>{LANG.Skills.TITLE}</Title>
+        <Paragraph delay={0.75}>{LANG.Skills.SUBTITLE}</Paragraph>
       </Description>
       <div className="flex flex-wrap justify-center gap-4 w-full max-w-[700px]">
         {skills.map((skill, index) => {

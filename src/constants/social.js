@@ -9,12 +9,12 @@ export const social = [
     url: "tg://resolve?domain=bredigian",
   },
   {
-    name: "Linkedin",
+    name: "LinkedIn",
     icon: <BsLinkedin size={30} />,
     url: "https://www.linkedin.com/in/gianluca-bredice-62a65b230/",
   },
   {
-    name: "Github",
+    name: "GitHub",
     icon: <FaGithub size={30} />,
     url: "https://github.com/bredigian",
   },
