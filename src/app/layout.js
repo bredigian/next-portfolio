@@ -3,6 +3,7 @@ import "./globals.css"
 import { Analytics } from "@vercel/analytics/react"
 import { Inter } from "next/font/google"
 import Navigator from "@/components/Navigator"
+import { Suspense } from "react"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -21,7 +22,9 @@ export default function RootLayout({ children }) {
         className={`${inter.className} flex xs:flex-col sm:flex-row h-screen items-center lg:overflow-hidden`}
       >
         <Analytics />
-        <Navigator />
+        <Suspense>
+          <Navigator />
+        </Suspense>
         {children}
       </body>
     </html>

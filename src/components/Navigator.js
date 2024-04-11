@@ -5,7 +5,7 @@ import { usePathname, useRouter, useSearchParams } from "next/navigation"
 import Link from "next/link"
 import { motion } from "framer-motion"
 
-const Navigator = () => {
+export default function Navigator() {
   const path = usePathname()
   const searchParams = useSearchParams()
   const params = new URLSearchParams(searchParams)
@@ -22,19 +22,19 @@ const Navigator = () => {
 
   const links = [
     {
-      label: params.get("lang") ? "Inicio" : "Home",
+      label: spanishActive ? "Inicio" : "Home",
       path: "/",
     },
     {
-      label: params.get("lang") ? "Habilidades" : "Skills",
+      label: spanishActive ? "Habilidades" : "Skills",
       path: "/skills",
     },
     {
-      label: params.get("lang") ? "Proyectos" : "Projects",
+      label: spanishActive ? "Proyectos" : "Projects",
       path: "/projects",
     },
     {
-      label: params.get("lang") ? "Acerca" : "About",
+      label: spanishActive ? "Acerca" : "About",
       path: "/about",
     },
   ]
@@ -76,5 +76,3 @@ const Navigator = () => {
     </nav>
   )
 }
-
-export default Navigator

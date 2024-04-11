@@ -3,7 +3,6 @@
 import { AnimatePresence, motion } from "framer-motion"
 import { useEffect, useState } from "react"
 
-import Description from "@/components/Description"
 import Image from "next/image"
 import PageAnimate from "@/components/PageAnimate"
 import Paragraph from "@/components/Paragraph"
