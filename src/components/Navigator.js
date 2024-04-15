@@ -69,7 +69,7 @@ export default function Navigator() {
       </ul>
       <span
         onClick={handleLang}
-        className="text-xs text-end opacity-30 underline sm:text-start sm:absolute sm:bottom-20 sm:opacity-100 sm:no-underline sm:hover:underline lg:text-base cursor-pointer"
+        className="text-xs text-white text-end opacity-30 underline sm:text-start sm:absolute sm:bottom-20 sm:opacity-100 sm:no-underline sm:hover:underline lg:text-base cursor-pointer"
       >
         {spanishActive ? "Cambiar a Inglés" : "Change to Spanish"}
       </span>
