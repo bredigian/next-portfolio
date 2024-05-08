@@ -1,11 +1,14 @@
+import { getAge } from "@/lib/utils"
+
+const age = getAge(new Date(2002, 3, 21))
+
 export const TEXT = {
   ENG: {
     Home: {
       TITLE: "Hi! I'm",
-      SUBTITLE:
-        "My name is Gianluca Bredice Vivarelli, I'm 21 and I'm from Argentina",
+      SUBTITLE: `My name is Gianluca Bredice Vivarelli, I'm ${age} and I'm from Argentina`,
       DESCRIPTION:
-        "I currently live in La Plata, I studied a systems-oriented career for 3 years but with the passage of time and other circumstances I realized that it is not what I thought. Thanks to that, in March 2022 I began to take different courses and learn by myself different technologies oriented to web development.",
+        "I currently live in La Plata, in 2020 I started a systems-oriented university career and in March 2022 I began to take different courses and learn by myself different technologies oriented to web development.",
     },
     Skills: {
       TITLE: "Skills",
@@ -33,8 +36,7 @@ export const TEXT = {
   ESP: {
     Home: {
       TITLE: "¡Hola! Soy",
-      SUBTITLE:
-        "Mi nombre es Gianluca Bredice Vivarelli, tengo 21 años y soy de Argentina.",
+      SUBTITLE: `Mi nombre es Gianluca Bredice Vivarelli, tengo ${age} años y soy de Argentina.`,
       DESCRIPTION:
         "Actualmente vivo en La Plata, inicié mi carrera orientada a sistemas en 2020 y a principios del 2022 emprendí camino como desarrollador web. Tomando diferentes cursos y estudiando de forma autonoma, fui aprendiendo y especializandome en las diferentes tecnologias que se utilizan hoy en día.",
     },
