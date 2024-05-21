@@ -11,7 +11,7 @@ export const social = [
   {
     name: "LinkedIn",
     icon: <BsLinkedin size={30} />,
-    url: "https://www.linkedin.com/in/gianluca-bredice-62a65b230/",
+    url: "https://www.linkedin.com/in/gianluca-bredice-vivarelli/",
   },
   {
     name: "GitHub",
