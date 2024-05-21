@@ -31,6 +31,7 @@ export const TEXT = {
         MESSAGE: "Message",
         SUBMIT: "Submit",
       },
+      CV_LINK: "./Gianluca_Bredice_Vivarelli-CV_English.pdf",
     },
   },
   ESP: {
@@ -61,6 +62,7 @@ export const TEXT = {
         MESSAGE: "Mensaje",
         SUBMIT: "Enviar",
       },
+      CV_LINK: "./Gianluca_Bredice_Vivarelli-CV.pdf",
     },
   },
 }

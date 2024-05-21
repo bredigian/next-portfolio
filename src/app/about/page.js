@@ -39,7 +39,7 @@ const About = ({ searchParams }) => {
           <h3 className="xs:text-base sm:text-lg xl:text-xl text-white">
             {LANG.About.LABEL}
           </h3>
-          <ContactForm lang={LANG.About.FORM} />
+          <ContactForm lang={LANG.About.FORM} cvLink={LANG.About.CV_LINK} />
         </motion.div>
       </div>
     </PageAnimate>

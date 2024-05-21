@@ -1,10 +1,11 @@
 import { Toaster, toast } from "sonner"
 
+import { FaFileArrowDown } from "react-icons/fa6"
 import Input from "./Input"
 import { motion } from "framer-motion"
 import { social } from "@/constants/social"
 
-const ContactForm = ({ lang }) => {
+const ContactForm = ({ lang, cvLink }) => {
   const dataInputs = [lang.NAME, lang.EMAIL, lang.MESSAGE]
 
   const handleSubmit = async (e) => {
@@ -46,6 +47,16 @@ const ContactForm = ({ lang }) => {
         {lang.SUBMIT}
       </button>
       <ul className="self-end -translate-y-[2px] justify-end col-span-6 flex flex-wrap gap-2">
+        <motion.li
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.3, delay: 1.75 }}
+          className="text-gray-300 hover:text-white duration-200 ease-in-out"
+        >
+          <a href={cvLink} target="_blank">
+            <FaFileArrowDown size={30} />
+          </a>
+        </motion.li>
         {social.map((item, index) => {
           const delay = 1.75 + index * 0.1
           return (
